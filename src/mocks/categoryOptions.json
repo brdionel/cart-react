@@ -1,0 +1,11 @@
+{
+  "options": [
+    { "value": "all" },
+    { "value": "home-decoration" },
+    { "value": "laptops" },
+    { "value": "smartphones" },
+    { "value": "fragrances" },
+    { "value": "skincare" },
+    { "value": "groceries" }
+  ]
+}

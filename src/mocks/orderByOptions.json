@@ -1,0 +1,7 @@
+{
+  "options": [
+    { "value": "relevance" },
+    { "value": "min-price" },
+    { "value": "max-price" }
+  ]
+}

@@ -1,0 +1,65 @@
+.favs-count {
+  color: var(--white);
+  vertical-align: top;
+  margin-left: 15px;
+  margin-top: -10px;
+  position: absolute;
+  background: var(--blue);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: appearAndBounce 2s ease-out forwards;
+}
+
+.button-favs {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 0.4em;
+  cursor: auto;
+}
+
+.button-favs svg {
+    height: 24px!important;
+    width: 24px!important;
+}
+
+@keyframes appearAndBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  25%,
+  35% {
+    transform: translateY(-8px);
+  }
+  45% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .button-favs {
+    display: none;
+  }
+}

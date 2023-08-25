@@ -1,0 +1,45 @@
+.glide__arrow--next, .glide__arrow--prev {
+    color: var(--black);
+    border: none;
+    box-shadow: none;
+}
+
+.glide__arrow--prev {
+    left: -16px;
+}
+
+.glide__arrow--next {
+    right: -16px;
+}
+
+.glide__bullets_custom {
+    bottom: -20px;
+    z-index: 0!important;
+}
+
+.glide__bullet {
+    background: var(--black);
+    opacity: .5;
+    border: none;
+    transition-delay: 10ms;
+    z-index: 0;
+}
+
+.glide__bullet--active {
+    opacity: 1;
+    background-color: var(--yellow);
+    border: none;
+    transition-duration: 50ms;
+    z-index: 0;
+}
+
+.glide__bullet:hover, .glide__bullet:focus {
+    background-color: var(--yellow);
+    border: none;
+    opacity: 1;
+    transition: background-color .05s ease;
+}
+
+.my-carousel {
+    margin-bottom: 2rem;
+}

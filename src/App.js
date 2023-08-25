@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { IntlProvider } from "react-intl";
+import { Products } from "./components/products";
+import Header from "./components/header";
+import Footer from "./components/footer";
+import { IS_DEVELOPMENT } from "./configs";
+import Drawer from "./components/drawer";
+import Wrapper from "./components/wrapper";
+import Filters from "./components/filters";
+import ModalWrapper from "./components/modalWrapper";
+import Cart from "./components/cart";
+import { useApp } from "./hooks/useApp";
+import { useDrawer } from "./hooks/useDrawer";
+import Loader from "./components/loader";
 
 function App() {
+  const { isDrawerOpen } = useDrawer();
+  const { isModalOpen, selectedLanguage, messages, isLoading } = useApp();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <IntlProvider
+      locale={selectedLanguage}
+      messages={messages[selectedLanguage.value]}
+    >
+      {isLoading && <Loader />}
+      <Header />
+      <Wrapper>
+        <Filters />
+        <Products />
+        {isDrawerOpen && (
+          <Drawer>
+            <Cart />
+          </Drawer>
+        )}
+      </Wrapper>
+      {IS_DEVELOPMENT && <Footer />}
+      {isModalOpen && <ModalWrapper />}
+    </IntlProvider>
   );
 }
 
