@@ -12,6 +12,10 @@
   .header-logo-text {
     font-size: 15px;
   }
+
+  .headerContainer {
+    padding: .5rem 0;
+  }
 }
 
 @media (min-width: 577px) {
