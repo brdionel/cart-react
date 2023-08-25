@@ -3,6 +3,7 @@ import { MdKeyboardArrowUp } from "react-icons/md";
 import { FormattedMessage } from "react-intl";
 import { useUserHeader } from "../hooks/useUserHeader";
 import "./userHeader.css";
+import { isMobile } from "../hooks/helper";
 
 const UserHeader = () => {
   const {
@@ -46,10 +47,13 @@ const UserHeader = () => {
                     <FormattedMessage id={"user-logged-hi"} />{" "}
                     {currentUser.name ? currentUser.name : ""}
                   </span>
-                  <span>{", "}</span>
-                  <span className="drowpdown-user-header-title-welcome-label">
-                    <FormattedMessage id={"user-logged-welcome"} />
-                  </span>
+                  
+                  {!isMobile() && <>
+                    <span>{", "}</span>
+                    <span className="drowpdown-user-header-title-welcome-label">
+                      <FormattedMessage id={"user-logged-welcome"} />
+                    </span>
+                  </>}
                 </span>
               </li>
               <li

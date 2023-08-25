@@ -4,3 +4,7 @@ export const truncateString = (text, limit = 100) => {
   }
   return text;
 };
+
+export const isMobile = () => {
+  return window.innerWidth < 576;
+};
