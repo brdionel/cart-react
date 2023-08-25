@@ -9,8 +9,9 @@ import { CartProvider } from "./context/cart";
 import { UserContextProvider } from "./context/user";
 import { AppProvider } from "./context/app";
 import { DrawerProvider } from "./context/drawer";
+import { REACT_APP_GOOGLE_CLIENT_ID } from "./configs";
 
-const googleClientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+const googleClientId = REACT_APP_GOOGLE_CLIENT_ID;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
