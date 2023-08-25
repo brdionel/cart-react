@@ -36,9 +36,10 @@ const Dropdown = ({ label_id, options, handleOptionSelected, getNameByOption }) 
             {options.map((option) => (
               <DropdownOption
                 handleInnerOptionSelected={handleInnerOptionSelected}
+                key={option.value}
+                labelOption={getNameByOption ? getNameByOption(option.value) : option.value}
                 option={option}
                 selectedOption={selectedOption}
-                labelOption={getNameByOption ? getNameByOption(option.value) : option.value}
               />
             ))}
           </ul>
