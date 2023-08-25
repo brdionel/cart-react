@@ -1,14 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { FilterProvider } from "./context/filters";
+import { CartProvider } from "./context/cart";
+import { UserContextProvider } from "./context/user";
+import { AppProvider } from "./context/app";
+import { DrawerProvider } from "./context/drawer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const googleClientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <GoogleOAuthProvider clientId={googleClientId}>
+    <DrawerProvider>
+      <CartProvider>
+        <UserContextProvider>
+          <FilterProvider>
+            <AppProvider>
+              <App />
+            </AppProvider>
+          </FilterProvider>
+        </UserContextProvider>
+      </CartProvider>
+    </DrawerProvider>
+  </GoogleOAuthProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

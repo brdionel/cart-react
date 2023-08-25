@@ -1,0 +1,25 @@
+.dropdown-flag-option-img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.dropdown-flag-option {
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    border-top: 1px solid var(--black);
+    cursor: pointer;
+}
+
+.dropdown-flag-option:hover {
+    background-color: var(--light-grey-300);
+}
+
+.dropdown-flag-option:nth-child(1) {
+    border-top: 1px solid transparent;
+}
+
+.dropdown-flag-option.selected {
+    font-weight: 700;
+    background-color: var(--light-grey-300);
+}

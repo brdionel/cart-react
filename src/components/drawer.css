@@ -1,0 +1,72 @@
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.button-drawer-close-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: var(--white);
+}
+
+.button-drawer-close {
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.drawer-content {
+  position: fixed;
+  top: 0;
+  left: 65%;
+  right: 0;
+  bottom: 0;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-left: 1px solid #444;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  transform: translate(100%);
+  transition: transform 0.5 ease-out;
+  z-index: 10;
+}
+
+.drawer-content.active {
+  animation: fade-in 0.5s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    transform: translate(100%);
+  }
+  to {
+    transform: translate(0%);
+  }
+}
+
+.drawer.closing .drawer-content {
+  animation: fade-out 0.5s forwards;
+}
+
+@keyframes fade-out {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(100%);
+  }
+}
+
+@media (max-width: 992px) {
+  .drawer-content {
+    left: 10%;
+  }
+}

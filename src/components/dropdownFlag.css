@@ -1,0 +1,117 @@
+.drowpdown-flag-button-flag {
+  border: 1px solid transparent;
+  padding: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 111;
+  position: relative;
+  transition: none;
+}
+
+.drowpdown-flag-button-flag.open {
+  border: 1px solid var(--black);
+}
+
+.dropdown-flag {
+  position: relative;
+}
+
+.drowpdown-flag-content {
+  position: absolute;
+  right: 0;
+  top: 38px;
+  border: 1px solid var(--black);
+  border-top: none;
+  width: 270px;
+  z-index: 221;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--white);
+}
+
+.drowpdown-flag-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px);
+  border-top: 1px solid var(--black);
+  z-index: -1;
+}
+
+.drowpdown-flag-content-title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.dropdown-flag-option-selected img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.dropdown-flag-option-selected img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.dropdown-flag-option-selected span {
+  font-weight: 700;
+}
+
+.dropdown-toggle-flag {
+  border-radius: 6px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 1rem;
+  line-height: 22px;
+  position: relative;
+  font-weight: 400;
+  gap: 0.5rem;
+  padding: 8px;
+  border: 1px solid var(--black);
+  border-radius: 0;
+  width: 100%;
+  padding: 15px;
+}
+
+.dropdown-menu-flag {
+  margin: 0;
+  border: 1px solid var(--black);
+  border-top: none;
+}
+
+.dropdown-flag-inner {
+  margin-bottom: 20px;
+}
+
+.dropdown-flag-content-button {
+  background-color: var(--black);
+  color: var(--yellow);
+  height: 50px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.flag_empty {
+  width: 42px;
+  height: 40px;
+  margin-left: 6.4px;
+}

@@ -1,0 +1,6 @@
+.fav-heart-icon {
+    text-align: right;
+}
+.fav-heart-icon svg {
+    cursor: pointer;
+}

@@ -1,0 +1,121 @@
+.cart-title-container {
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--light-grey);
+  background-color: var(--white);
+}
+
+.cart-title {
+  text-align: center;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--black);
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.cart img {
+  width: 89px;
+  height: 89px;
+  object-fit: contain;
+}
+
+.cart li {
+  padding-bottom: 16px;
+}
+
+.cart footer {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart footer button {
+  padding: 8px;
+}
+
+.empty-cart-container {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-cart-container svg {
+  width: 50px;
+  height: 50px;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.product-listing-container {
+  background-color: var(--white);
+}
+
+.product-listing-content {
+  height: 45vh;
+  overflow: auto;
+  scrollbar-width: thin;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+/* Estilo para WebKit (Chrome, Safari) */
+.product-listing-content::-webkit-scrollbar {
+  width: 3px;
+}
+
+.product-listing-content::-webkit-scrollbar-thumb {
+  background-color: var(
+    --black
+  );
+}
+
+.cart-footer {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.cart-footer-total {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  border-top: 1px solid var(--light-grey);
+  padding-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-footer-total_label,
+.cart-footer-total_value {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.cart-footer-subtotal {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  padding-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-footer-subtotal_label {
+  font-weight: 400;
+}
+
+.cart-title-container-without-products {
+  border-color: transparent;
+}

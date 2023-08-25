@@ -1,0 +1,15 @@
+.button_component {
+  background-color: var(--black);
+  color: var(--yellow);
+  text-transform: uppercase;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.button_component[disabled] {
+  opacity: .3;
+  pointer-events: none;
+}
