@@ -57,9 +57,3 @@
     transform: translateY(0);
   }
 }
-
-@media (max-width: 576px) {
-  .button-favs {
-    display: none;
-  }
-}

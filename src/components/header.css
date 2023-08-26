@@ -95,3 +95,9 @@
   align-items: center;
   gap: 5px;
 }
+
+@media (max-width: 576px) {
+  .header-iconsContainer {
+    gap: 0;
+  } 
+}
