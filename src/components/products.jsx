@@ -4,6 +4,7 @@ import { useCart } from "../hooks/useCart";
 import { useProducts } from "../hooks/useProducts";
 import { useDrawer } from "../hooks/useDrawer";
 import { useApp } from "../hooks/useApp";
+import { isMobile } from "../hooks/helper";
 import Fav from "./fav";
 import Carousel from "./carousel";
 import Button from "./button";
@@ -30,7 +31,13 @@ export function Products() {
             return (
               <li key={product.id} className="product-item-container">
                 <Fav id={product.id} />
-                <Carousel images={product.images} />
+                {
+                  isMobile
+                  ? <div>
+                    <img src={product.images[0]} alt={product.images[0]} />
+                  </div>
+                  : <Carousel images={product.images} />
+                }
                 <div className="product-details-container">
                   <div>
                     <span className="product-item-money-amount-previous">

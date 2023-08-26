@@ -4,7 +4,6 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import { IS_DEVELOPMENT } from "./configs";
 import Drawer from "./components/drawer";
-import Wrapper from "./components/wrapper";
 import Filters from "./components/filters";
 import ModalWrapper from "./components/modalWrapper";
 import Cart from "./components/cart";
@@ -23,15 +22,13 @@ function App() {
     >
       {isLoading && <Loader />}
       <Header />
-      <Wrapper>
-        <Filters />
-        <Products />
-        {isDrawerOpen && (
-          <Drawer>
-            <Cart />
-          </Drawer>
-        )}
-      </Wrapper>
+      <Filters />
+      <Products />
+      {isDrawerOpen && (
+        <Drawer>
+          <Cart />
+        </Drawer>
+      )}
       {IS_DEVELOPMENT && <Footer />}
       {isModalOpen && <ModalWrapper />}
     </IntlProvider>
