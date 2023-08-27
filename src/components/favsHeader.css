@@ -18,13 +18,14 @@
   animation: appearAndBounce 2s ease-out forwards;
 }
 
-.button-favs {
+.button-favs, .button-favs a {
   border: none;
   background-color: transparent;
   cursor: pointer;
   padding: 0;
   margin: 0 0.4em;
   cursor: auto;
+  color: var(--black);
 }
 
 .button-favs svg {
