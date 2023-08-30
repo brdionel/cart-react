@@ -2,15 +2,15 @@
 
 ## Características
 
-- [x] Muestra una lista de productos.
-- [x] Filtro por categoría y por precio.
-- [x] Ordenanamiento.
-- [x] Gestión del carrito.
-- [x] Gestión de usuarios.
-- [x] Gestión de favoritos.
-- [x] Persistencia con localStorage
-- [x] Internacionalización.
-- [x] SEO.
-- [x] Login con Google.
-- [x] Carousel de imágenes del producto.
-- [x] Lazy Load de las imágenes.
+- [:clipboard:] Muestra una lista de productos.
+- [💲] Filtro por categoría y por precio.
+- [:twisted_rightwards_arrows:] Ordenanamiento.
+- [:shopping_cart:] Gestión del carrito.
+- [:bust_in_silhouette:] Gestión de usuarios.
+- [❤️] Gestión de favoritos.
+- [💾] Persistencia con localStorage
+- [:earth_americas:] Internacionalización.
+- [:mag:] SEO.
+- [:key:] Login con Google.
+- [🖼️] Carousel de imágenes del producto.
+- [⏳ ] Lazy Load de las imágenes.
