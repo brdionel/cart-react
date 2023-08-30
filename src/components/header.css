@@ -70,11 +70,12 @@
   transform: scale(1.1);
 }
 
-.button-user svg {
+.button-user svg, .button-user a {
   height: 24px !important;
   width: 24px !important;
   margin: 0 0.4em;
   cursor: pointer;
+  color: var(--black);
 }
 
 .header-fixed.hide {

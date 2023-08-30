@@ -1,9 +1,10 @@
-.button-cart {
+.button-cart, .button-cart a {
   border: none;
   background-color: transparent; 
   cursor: pointer;
   padding: 0;
   margin: 0 0.4em;
+  color: var(--black);
 }
 
 .button-cart svg {
