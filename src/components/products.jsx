@@ -32,7 +32,7 @@ export function Products() {
               <li key={product.id} className="product-item-container">
                 <Fav id={product.id} />
                 {
-                  isMobile
+                  isMobile()
                   ? <div>
                     <img src={product.images[0]} alt={product.images[0]} />
                   </div>
