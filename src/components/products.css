@@ -151,15 +151,16 @@
   }
 }
 
-.product-item-button-container button {
-  opacity: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: opacity 0.65s ease-in-out, transform 0.65s ease;
-}
 
 
 @media (min-width: 576px){
+  
+  .product-item-button-container button {
+    opacity: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: opacity 0.65s ease-in-out, transform 0.65s ease;
+  }
   .product-item-container:hover .product-item-button-container button {
     opacity: 1;
     transform: scaleX(1);
