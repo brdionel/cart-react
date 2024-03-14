@@ -17,7 +17,7 @@ function CartItem({
   return (
     <li key={id} className="cart-item-container">
       <img src={thumbnail} alt={title} />
-      <div>
+      <div className="qty-and-description">
         <h6 className="product-title">{title}</h6>
         <p className="product-description">{truncateString(description, 50)}</p>
         <div className="button-qty-container">

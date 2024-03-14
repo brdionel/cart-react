@@ -5,7 +5,7 @@ import "./favsHeader.css";
 
 const FavsHeader = () => {
   const { currentUser } = useUser();
-  const favsQuantity = currentUser?.favs.length || 0;
+  const favsQuantity = currentUser?.favs?.length || 0;
   const {showFavorites } = useFavsHedaer();
 
   return (
