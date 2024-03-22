@@ -18,7 +18,7 @@
 .cart img {
   width: 89px;
   height: 89px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .cart li {
