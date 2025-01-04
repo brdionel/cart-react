@@ -10,22 +10,22 @@ export const FilterProvider = ({ children }) => {
 
   const [filters, setFilters] = useState({
     category: "all",
-    minPrice: 0,
-    maxPrice: 1750,
   });
 
-  const [orderBy, setOrderBy] = useState(initialOrderByOptions.options[0].value)
+  const [orderBy, setOrderBy] = useState(
+    initialOrderByOptions.options[0].value
+  );
 
-  const handleCategorySelected = ( category ) => {
+  const handleCategorySelected = (category) => {
     setFilters((prevState) => ({
       ...prevState,
-      category
-    }))
-  }
+      category,
+    }));
+  };
 
   const handleOrderByOptionSelected = (option) => {
-    setOrderBy(option)
-  }
+    setOrderBy(option);
+  };
 
   return (
     <FilterContext.Provider
@@ -36,7 +36,7 @@ export const FilterProvider = ({ children }) => {
         categoryOptions,
         handleCategorySelected,
         handleOrderByOptionSelected,
-        orderBy
+        orderBy,
       }}
     >
       {children}

@@ -646,6 +646,22 @@
          ]
       },
       {
+         "id": 932,
+         "title": "Yellow Striped",
+         "description": "",
+         "price": 10,
+         "discountPercentage": 15.34,
+         "rating": 4.44,
+         "stock": 7,
+         "brand": "Wing",
+         "category": "socks",
+         "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfC4xcuw58CUTSJ2kudlfeq7TuA2ZgCEOLvg&s",
+         "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfC4xcuw58CUTSJ2kudlfeq7TuA2ZgCEOLvg&s"
+         ]
+      }
+      ,
+      {
          "id": 929,
          "title": "Trinche",
          "description": " El ‘Trinche’ fue el más grande presenta la historia del recientemente fallecido Tomás Felipe Carlovich y su huella en el futbol argentino. Su trágica muerte no solo lleva consigo a un mito del modesto Central Córdoba; sino a la evocación de un futbolista que pocos pudieron ver; pero muchos disfrutan imaginar. Para su mala fortuna, las indisciplinas le impidieron trascender a mayor escala. Tras su debut en Primera División, fue despedido por las constantes ausencias e impuntualidad en los entrenamientos. Más adelante le señalaron de tener gusto por la vida nocturna, fama que lo acompañó durante sus más de 15 años como profesional. De paso, una época transitiva en el futbol pampero le pasó factura, pues la preparación física tomó mayor relevancia entre los estrategas. Carlovich fue atractivo para el futbol extranjero, pudo jugar en el futbol de Francia y en el Cosmos, del ‘Rey Pelé’, pero ninguno de los pases se concretó.",
@@ -659,7 +675,60 @@
          "images": [
             "https://res.cloudinary.com/dtnixnyfz/image/upload/v1710395694/trinche11-270f545a1e0c2496e915965470962835-1024-1024_vwusb6.webp"
          ]
+      },
+      {
+         "id": 1532,
+         "title": "Dibu Fanny Pack",
+         "description": "Llegó nuestra nueva riñonera bordada, con el idolo de tu vida y con mucho más espacio! Realizada en trucker ( tela resistente al agua) y con cinta regulable, para llevarla tanto en la cintura con cruzada. Cuenta con dos espacios para guardar tus cosas. En el frente un cierre grande y otro escondido en la parte de atrás para cuidar tu celu o  billetera .",
+         "price": 40,
+         "discountPercentage": 10.99,
+         "rating": 4.7,
+         "stock": 105,
+         "brand": "Wing",
+         "category": "fanny-pack",
+         "thumbnail": "https://acdn.mitiendanube.com/stores/081/053/products/33_tienda_ant84281-c8207700db203c013316934853333649-1024-1024.webp",
+         "images": [
+            "https://acdn.mitiendanube.com/stores/081/053/products/33_tienda_ant84281-c8207700db203c013316934853333649-1024-1024.webp",
+            "https://acdn.mitiendanube.com/stores/081/053/products/34_tienda_ant84291-6e4e9e14e759e77a4116934853341170-1024-1024.webp",
+            "https://acdn.mitiendanube.com/stores/081/053/products/32_tienda_ant84231-be336430ca3f89f76716934853332741-1024-1024.webp"
+         ]
+      },
+      {
+         "id": 1322,
+         "title": "Buzo Roberto10",
+         "description": "Buzo Roberto10",
+         "price": 130,
+         "discountPercentage": 8.14,
+         "rating": 4.59,
+         "stock": 61,
+         "brand": "Wing",
+         "category": "sweatshirt",
+         "thumbnail": "https://acdn.mitiendanube.com/stores/081/053/products/_ant26301-7883077a63d069b35516535994407066-1024-1024.webp",
+         "images": [
+            "https://acdn.mitiendanube.com/stores/081/053/products/_ant26301-7883077a63d069b35516535994407066-1024-1024.webp",
+            "https://acdn.mitiendanube.com/stores/081/053/products/_ant26381-c9d1f263f9ab6cdcd216535994411053-1024-1024.webp",
+            "https://acdn.mitiendanube.com/stores/081/053/products/_ant26351-3206551f4a2cf148c716535994410456-1024-1024.webp"
+         ]
+      },
+      {
+         "id": 2432,
+         "title": "Lio",
+         "description": "Campera línea Wing de tela rústico manga larga y calce regular. Con bolsillos frontales, capucha, cordones teñidos en el mismo tono que la prenda y con puntas metálicas como el cierre reforzado. Su tejido de fabricación y confección propia, fue diseñado para llevar tu espíritu de fútbol a todas partes.",
+         "price": 72,
+         "discountPercentage": 16.8,
+         "rating": 4.94,
+         "stock": 113,
+         "brand": "Wing",
+         "category": "jacket",
+         "thumbnail": "https://acdn.mitiendanube.com/stores/081/053/products/bff_62541-df778c11571075604b16294815448334-1024-1024.webp",
+         "images": [
+            "https://acdn.mitiendanube.com/stores/081/053/products/bff_62541-df778c11571075604b16294815448334-1024-1024.webp",
+            "https://acdn.mitiendanube.com/stores/081/053/products/bff_62511-fdbd5e22b70f4c011716294815450206-1024-1024.webp",
+            "https://acdn.mitiendanube.com/stores/081/053/products/bff_62401-fd70100b7f2c3c542816294815451705-1024-1024.webp"
+         ]
       }
+
+      
    ],
    "total": 100,
    "skip": 0,

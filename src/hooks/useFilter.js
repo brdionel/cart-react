@@ -20,8 +20,6 @@ export const useFilter = () => {
       products &&
       products.filter((product) => {
         return (
-          product.price >= filters.minPrice &&
-          product.price <= filters.maxPrice &&
           (filters.category === "all" || product.category === filters.category)
         );
       });
@@ -48,18 +46,18 @@ export const useFilter = () => {
       switch (category) {
         case "all":
           return formatMessage({ id: "all" });
-        case "home-decoration":
-          return formatMessage({ id: "filters_homeDecoration" });
-        case "laptops":
-          return formatMessage({ id: "filters_laptops" });
-        case "smartphones":
-          return formatMessage({ id: "filters_smartphones" });
-        case "fragrances":
-          return formatMessage({ id: "filters_fragrances" });
-        case "skincare":
-          return formatMessage({ id: "filters_skincare" });
-        case "groceries":
-          return formatMessage({ id: "filters_groceries" });
+        case "t-shirt":
+          return formatMessage({ id: "filters_t-shirt" });
+        case "hoodie":
+          return formatMessage({ id: "filters_hoodie" });
+        case "jacket":
+          return formatMessage({ id: "filters_jacket" });
+        case "sweatshirt":
+          return formatMessage({ id: "filters_sweatshirt" });
+        case "fanny-pack":
+          return formatMessage({ id: "filters_fanny-pack" });
+        case "socks":
+          return formatMessage({ id: "filters_socks" });
 
         default:
           return category;
