@@ -1,4 +1,11 @@
-import { createContext, useState, useRef, useEffect, useMemo, useCallback } from "react";
+import {
+  createContext,
+  useState,
+  useRef,
+  useEffect,
+  useMemo,
+  useCallback,
+} from "react";
 import { useUser } from "../hooks/useUser";
 import initialProducts from "../mocks/products.json";
 import ptTranslation from "../locales/pt.json";
@@ -7,6 +14,7 @@ import usTranslation from "../locales/us.json";
 import AR from "../ar.svg";
 import BR from "../br.svg";
 import US from "../us.svg";
+import { STORAGE_PREFIX } from "../constants";
 
 export const AppContext = createContext();
 
@@ -22,13 +30,18 @@ export const AppProvider = ({ children }) => {
   const [products, setProducts] = useState(initialProducts);
   const [isLoading, setIsLoading] = useState(false);
   const [variantLogin, setVariantLogin] = useState(null);
-  const [favAfterLogin, setFavAfterLogin] = useState(null)
+  const [favAfterLogin, setFavAfterLogin] = useState(null);
 
-  const initialLanguageFromLS = JSON.parse(localStorage.getItem("language"));
+  const initialLanguageFromLS = JSON.parse(
+    localStorage.getItem(`${STORAGE_PREFIX}language`)
+  );
   let initialLanguage;
   if (!initialLanguageFromLS) {
     initialLanguage = languageOptions[0];
-    localStorage.setItem("language", JSON.stringify(initialLanguage));
+    localStorage.setItem(
+      `${STORAGE_PREFIX}language`,
+      JSON.stringify(initialLanguage)
+    );
   } else {
     initialLanguage = initialLanguageFromLS;
   }
@@ -67,20 +80,21 @@ export const AppProvider = ({ children }) => {
   };
 
   const handleFavAfterLogin = (value) => {
-    setFavAfterLogin(value)
-  }
+    setFavAfterLogin(value);
+  };
 
   const reorderLanguages = useCallback(() => {
-    if(selectedLanguage.value === languageOptions[0].value) return;
+    if (selectedLanguage.value === languageOptions[0].value) return;
     const sortedLanguages = JSON.parse(JSON.stringify(languageOptions));
-    
-    const selectedIndex = sortedLanguages.findIndex(lang => lang.value === selectedLanguage.value)
+
+    const selectedIndex = sortedLanguages.findIndex(
+      (lang) => lang.value === selectedLanguage.value
+    );
     sortedLanguages.splice(selectedIndex, 1);
     sortedLanguages.unshift(selectedLanguage);
-    
+
     setLanguageOptions(sortedLanguages);
   }, [languageOptions, selectedLanguage]);
-
 
   useEffect(() => {
     reorderLanguages();
@@ -104,9 +118,9 @@ export const AppProvider = ({ children }) => {
 
   const handleSetVariantOpenLogin = (variant, id) => {
     setVariantLogin(variant);
-    handleFavAfterLogin(id)
+    handleFavAfterLogin(id);
   };
-  
+
   return (
     <AppContext.Provider
       value={{
@@ -126,7 +140,7 @@ export const AppProvider = ({ children }) => {
         variantLogin,
         handleSetVariantOpenLogin,
         favAfterLogin,
-        handleFavAfterLogin
+        handleFavAfterLogin,
       }}
     >
       {children}

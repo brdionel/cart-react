@@ -1,3 +1,5 @@
+import { STORAGE_PREFIX } from "../constants";
+
 export const initialState = JSON.parse(localStorage.getItem("cart")) || [];
 
 export const CART_ACTION_TYPES = {
@@ -9,20 +11,21 @@ export const CART_ACTION_TYPES = {
 };
 
 const updateLocalStorage = (newState) => {
-  localStorage.setItem("cart", JSON.stringify(newState));
-  const currentUserLocal = JSON.parse(localStorage.getItem("currentUser"));
+  localStorage.setItem(`${STORAGE_PREFIX}cart`, JSON.stringify(newState));
+  const currentUserLocal = JSON.parse(localStorage.getItem(`${STORAGE_PREFIX}currentUser`));
 
   if (currentUserLocal) {
     currentUserLocal.cart = newState;
-    localStorage.setItem("currentUser", JSON.stringify(currentUserLocal));
-    const usersLocal = JSON.parse(localStorage.getItem("users"));
+    localStorage.setItem(`${STORAGE_PREFIX}currentUser`, JSON.stringify(currentUserLocal));
+    const usersLocal = JSON.parse(localStorage.getItem(`${STORAGE_PREFIX}users`));
     if (usersLocal) {
       // Save the current user with cart in users
       const currentUserInUsersIndex = usersLocal.findIndex(
         (item) => item.email === currentUserLocal.email
       );
       usersLocal[currentUserInUsersIndex].cart = newState;
-      localStorage.setItem("users", JSON.stringify(usersLocal));
+      
+      localStorage.setItem(`${STORAGE_PREFIX}users`, JSON.stringify(usersLocal));
     }
   }
 };

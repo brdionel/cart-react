@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useGoogleLogin } from "@react-oauth/google";
 import { useCart } from "./useCart";
+import { STORAGE_PREFIX } from "../constants";
 
 export function useLogin({
   validateEmail,
@@ -85,10 +86,10 @@ export function useLogin({
           const usersPartial = users;
           setUsers(usersPartial.concat(userLogged));
           localStorage.setItem(
-            "users",
+            `${STORAGE_PREFIX}users`,
             JSON.stringify(usersPartial.concat(userLogged))
           );
-          localStorage.setItem("currentUser", JSON.stringify(userLogged));
+          localStorage.setItem(`${STORAGE_PREFIX}currentUser`, JSON.stringify(userLogged));
         } else {
           if (favAfterLogin) {
             if (!existUser.favs.find((item) => item === favAfterLogin)) {
@@ -98,10 +99,11 @@ export function useLogin({
           }
           if (Array.isArray(existUser.cart) && existUser.cart.length > 0) {
             mergeCart(existUser.cart);
-            localStorage.setItem("cart", JSON.stringify(existUser.cart));
+            
+            localStorage.setItem(`${STORAGE_PREFIX}cart`, JSON.stringify(existUser.cart));
           }
           setCurrentUser(existUser);
-          localStorage.setItem("currentUser", JSON.stringify(existUser));
+          localStorage.setItem(`${STORAGE_PREFIX}currentUser`, JSON.stringify(existUser));
         }
         handleCloseModal();
       } catch (error) {

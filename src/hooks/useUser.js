@@ -1,6 +1,7 @@
 import { useContext, useCallback } from "react";
 import { UserContext } from "../context/user";
 import { useCart } from "./useCart";
+import { STORAGE_PREFIX } from "../constants";
 
 export const useUser = (props) => {
   const { users, setUsers, setCurrentUser, currentUser, favs, setFavs } =
@@ -22,7 +23,7 @@ export const useUser = (props) => {
     const listOfUsers = users;
     listOfUsers.push(newUser);
     setUsers(listOfUsers);
-    localStorage.setItem("users", JSON.stringify(listOfUsers));
+    localStorage.setItem(`${STORAGE_PREFIX}users`, JSON.stringify(listOfUsers));
     const { email, password } = data;
     const rta = login({ email, password });
     return rta;
@@ -45,10 +46,11 @@ export const useUser = (props) => {
         // Here I would might merge user cart with non user cart.
         if (Array.isArray(existUser.cart) && existUser.cart.length > 0) {
           mergeCart(existUser.cart);
-          localStorage.setItem("cart", JSON.stringify(existUser.cart));
+          
+          localStorage.setItem(`${STORAGE_PREFIX}cart`, JSON.stringify(existUser.cart));
         }
-        setCurrentUser(existUser);
-        localStorage.setItem("currentUser", JSON.stringify(existUser));
+        setCurrentUser(existUser);     
+        localStorage.setItem(`${STORAGE_PREFIX}currentUser`, JSON.stringify(existUser));
         return true;
       }
       return false;
@@ -74,10 +76,11 @@ export const useUser = (props) => {
     const newUsersState = structuredClone(users);
     newUsersState[currentUserInUsersIndex].cart = cart;
     setUsers(newUsersState);
-    localStorage.setItem("users", JSON.stringify(newUsersState));
+    
+    localStorage.setItem(`${STORAGE_PREFIX}users`, JSON.stringify(newUsersState));
     cleanCart();
     setCurrentUser(null);
-    localStorage.setItem("currentUser", null);
+    localStorage.setItem(`${STORAGE_PREFIX}currentUser`, null);
   }, [setCurrentUser, cart, currentUser, setUsers, users, cleanCart, favs]);
 
   const validateEmail = useCallback(
@@ -116,8 +119,9 @@ export const useUser = (props) => {
         ...currentUser,
         favs: userFavs,
       });
+      
       localStorage.setItem(
-        "currentUser",
+        `${STORAGE_PREFIX}currentUser`,
         JSON.stringify({
           ...currentUser,
           favs: userFavs,
@@ -135,8 +139,9 @@ export const useUser = (props) => {
         ...currentUser,
         favs: newFavs,
       });
+      
       localStorage.setItem(
-        "currentUser",
+        `${STORAGE_PREFIX}currentUser`,
         JSON.stringify({
           ...currentUser,
           favs: newFavs,

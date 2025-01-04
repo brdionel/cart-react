@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useApp } from "./useApp";
+import { STORAGE_PREFIX } from "../constants";
 
 export function useDropdownFlag() {
   const {
@@ -48,14 +49,14 @@ export function useDropdownFlag() {
     handleIsLoading(true);
     setTimeout(() => {
       handleSelectLanguage(selectedOption);
-      localStorage.setItem("language", JSON.stringify(selectedOption));
+      localStorage.setItem(`${STORAGE_PREFIX}language`, JSON.stringify(selectedOption));
       setIsOpenDropdown(false);
       handleIsLoading(false);
     }, 1500);
   };
 
   useEffect(() => {
-    const selectedOptionLS = JSON.parse(localStorage.getItem("language"));
+    const selectedOptionLS = JSON.parse(localStorage.getItem(`${STORAGE_PREFIX}language`));
     if (selectedOptionLS) {
       setSelectedOption(selectedOptionLS);
     }
