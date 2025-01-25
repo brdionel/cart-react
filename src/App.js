@@ -31,7 +31,7 @@ function App() {
           <Cart />
         </Drawer>
       )}
-      {IS_DEVELOPMENT && <Footer />}
+      <Footer />
       {isModalOpen && <ModalWrapper />}
     </IntlProvider>
   );
