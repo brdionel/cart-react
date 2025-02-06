@@ -20,9 +20,9 @@ export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [languageOptions, setLanguageOptions] = useState([
+    { value: "us", label: "EN", flag: US },
     { value: "es", label: "ES", flag: AR },
     { value: "pt", label: "PT", flag: BR },
-    { value: "us", label: "EN", flag: US },
   ]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,6 +35,9 @@ export const AppProvider = ({ children }) => {
   const initialLanguageFromLS = JSON.parse(
     localStorage.getItem(`${STORAGE_PREFIX}language`)
   );
+
+  // const browserLanguage = navigator.language.split("-")[0];
+  
   let initialLanguage;
   if (!initialLanguageFromLS) {
     initialLanguage = languageOptions[0];
